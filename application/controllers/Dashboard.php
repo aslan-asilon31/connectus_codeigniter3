@@ -5,6 +5,12 @@ class Dashboard extends CI_Controller {
 
         public function index()
         {
-                $this->load->view('welcome_message');
+          $data = array(
+            'title' => 'Your Page Title',
+            'header' => 'Welcome to Your Site',
+            'content' => 'This is the main content of your page.',
+        );
+
+        $this->load->view('layout_backend', $data); 
         }
 }
